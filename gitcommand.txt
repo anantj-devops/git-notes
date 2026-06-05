@@ -25,4 +25,4 @@ git switch feature1
 
 git checkout -b feature2
 
-git branch
+git branch ( this command is used to see the available branches)
