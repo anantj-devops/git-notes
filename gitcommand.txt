@@ -19,7 +19,6 @@ git status
 
 git branch feature1
 
-git checkout feature1
 
 git switch feature1
 
