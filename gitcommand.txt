@@ -19,8 +19,9 @@ git status
 
 git branch feature1
 
-git checkout feature1
 
 git switch feature1
 
 git checkout -b feature2
+
+git branch ( this command is used to see the available branches)
