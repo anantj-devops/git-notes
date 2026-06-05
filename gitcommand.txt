@@ -34,3 +34,6 @@ git push origin <new branch>
 
 git add origin < remote-repo-url>
 git push origin master
+
+
+now we are testing that can we directly push the changes without mention the local repo name 
