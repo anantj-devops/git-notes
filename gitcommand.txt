@@ -1,0 +1,26 @@
+git config --global user.name "anantj-devops"
+git config --global user.email "anantjain1717@gmail.com"
+
+git init
+
+git add . 
+
+git add filename
+
+git commit -m "comment msg"
+
+git clone [URL]
+
+git push origin <branch name>
+
+git pull origin <branch name>
+
+git status
+
+git branch feature1
+
+git checkout feature1
+
+git switch feature1
+
+git checkout -b feature2
