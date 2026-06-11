@@ -127,20 +127,3 @@ git push origin login-feature:master
 
 To push from local login-feature branch too remote repo login-feature branch
 git push origin login-feature:login-feature
-
-
-
-git switch feature1
-
-git checkout -b feature2
-
-git branch ( this command is used to see the available branches)
-
-
-
-
-
-git push origin <new branch>
-
-git add origin < remote-repo-url>
-git push origin master
