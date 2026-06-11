@@ -1,23 +1,133 @@
+Configure Git: Setup the username and email- 
 git config --global user.name "anantj-devops"
 git config --global user.email "anantjain1717@gmail.com"
 
+Create a Repository : Create a project directory and initialize a git repo.
 git init
 
+Make the first commit: create a file inside the folder and add the file to the staging are and then commit the changes.
 git add . 
-
+or
 git add filename
-
+then
 git commit -m "comment msg"
 
+Git rm –cached <filename>: this command is used to unstaged the staged file after running git add . 
+git rm --cached <filename>
+
+in terminal rm <filename>: to delete file
+rm <filename>
+
+Git restore <filename>: to recover deleted file
+git restore <filename>
+
+Git Clone: Clone a remote repository to our local system
+Note- this download the entire project file to the local system
 git clone [URL]
 
+Git push : this command pushes the commit to the remote repo/central repo
 git push origin <branch name>
 
+Git pull : This command fetch and merge the changes from the remote repo to the local repo
 git pull origin <branch name>
 
+Git Status: Shows the status of changes in the working director (it shows that the file is untracked or staged)
 git status
 
-git branch feature1
+Connect Git to GitHub
+Create a remote repo on the GitHub
+Now Connect the remote repo the local git
+git remote add origin <remote-repo-URL>
+
+Verify the Connection
+git remote -v
+
+Push all files to remote repo
+git push -u origin <branch-name>
+(-u we use for the first time to remember future push and pull)
+
+Change Github Repo URL: to configure any other remote repo locally 
+git remote set url origin (new-repo-url)
+
+Remove GitHub Connection
+git remote remove origin
+or
+git rm origin
+
+
+LETS UNDERSTAND THE BRANCHING TECHINIQ AND COMMANDS
+
+Check Current Branch:
+git status
+
+Show all available local branches
+git branch
+
+Check remote branches
+git branch -r
+
+Check all branches (local and remote)
+git branch -a
+
+To create branch
+git branch <branchname>
+
+To switch branches
+git switch <branch-name>
+or
+git checkout <branch-name>
+
+Create and Switch Branch
+git checkout -n <branch-name>
+or
+git switch -c <branch-name>
+
+Merge Branch
+git checkout main (move to the branch to whom you want to merge the another branch)
+git merge <branch-name(the branch you want to merge)>
+
+Delete Branch
+git branch -d <branch-name>
+
+For force Delete
+git branch -D <filename>
+
+Rename Current Branch
+git branch -m<new-name>
+
+Rename another Branch
+git branch -m <old-name> <new-name>
+
+Compare branch 
+git diff <branch1-name> <branch2-name>
+
+See merged Branch
+git branch --merged
+
+See un-merged branch
+git branch --no-merged
+
+Push the Branch to remote
+git push origin <branch-name>
+
+Delete the remote Branch
+git push origin --delete <branch-name>
+
+Fetch all remote branch: Download branch info from remote
+git fetch --all
+
+Find which branch contains a commit:
+git branch --contains <commit-id>
+
+Push all local branches
+git push --all origin
+
+To push from local login-feature branch to remote repo master branch
+git push origin login-feature:master
+
+To push from local login-feature branch too remote repo login-feature branch
+git push origin login-feature:login-feature
+
 
 
 git switch feature1
@@ -34,6 +144,3 @@ git push origin <new branch>
 
 git add origin < remote-repo-url>
 git push origin master
-
-
-now we are testing that can we directly push the changes without mention the local repo name 
