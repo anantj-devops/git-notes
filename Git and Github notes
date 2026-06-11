@@ -1,0 +1,205 @@
+Git - Git is a free, distributed version control system, that helps track and manage changes in code over time. 
+It allow multiple developers to work on the same project, view previous version, and restore changes when needed.
+Git is the version control system, it help track and manage the code, it provide CLI to interact with git
+
+GitHub- it is platform which is used for the same and some extra functionalities 
+It is used for source code management. Here we have the GUI
+
+
+Other similar tools- bitbucket well suited with jira nd CI/CD
+Gitlab well suited with CI/CD and AI
+Github well suited for copilot github actions
+
+
+
+Features of Git
+1- Version Control System- Git keep track of every changes we make to our project files, we can back to previous version if required.
+
+2- Repositories- A Git repositories is like a project central hub where everything related to the project is stored and managed
+There are 2 type of Repositories:
+Local Repo- This is the copy of the central repo which is stored in the computer, we can work on our project and make the changes here.
+Remote Repo- This is the main or can say central repo which is stored on server like GitHub, here we and other can share the code and work on the project.
+
+3- Commit- Every time we make change and save in the git that is called commit , the repo keep track off the commit we have made.
+
+4- Branches- A Repo allow us to create the branch and work on the new feature and fixes,
+Ex- we have a main branch for the stable code, and feature branch for the new feature we are developing.
+
+5- Merging- Once we have done the work on the branches we have made then we can merge those branches into main branch.
+This adds the changes we made in the project.
+
+6- Cloning- Cloning is the process of making a complete copy of git repository, it’s like copying the entire project from the central local to our computer.
+
+Advantage of using Git
+Distributed System- Every developer have complete project copy to their system which allow developer’s to work offline.
+Performance- Git is fast and efficient, handle large project with ease.
+Branching & Merging- Git provide the lightweight branching and easy merging facility which allow parallel development and feature isolation.
+Collaboration- Tools like GitHub enhance team collaboration, code review and project management.
+Track Changes- Git tracks changes and maintain a history, which makes easy to revert to previous version.
+
+Step to SetUp Git
+Step1- Install Git: Download and install git from its official website: Git - Install for Windows 
+
+Step2- Configure Git: Setup the username and email
+git config --global user.name "anantj-devops"
+git config --global user.email "anantjain1717@gmail.com"
+
+Step3- Create a Repository : Create a project directory and initialize a git repo.
+git init
+
+Step4- Make the first commit: create a file inside the folder and add the file to the staging are and then commit the changes.
+git add .
+or 
+git add filename
+Then
+git commit -m "comment msg"
+
+ Basic Git Commands
+Git init: Initializes a new git repo
+git init
+
+Git rm –cached <filename>: this command is used to unstaged the staged file after running git add . 
+git rm --cached <filename>
+
+Git restore <filename>: to recover deleted file
+git restore <filename>
+Git Clone: Clone a remote repository to our local system
+Note- this download the entire project file to the local system
+git clone [URL]
+
+Git add : It stages the changes to be committed 
+git add .
+Or 
+git add <filename>
+
+Git commit -m : this command commit the stages changes with a msg.
+git commit -m "comment msg"
+
+Git push : this command pushes the commit to the remote repo/central repo.
+git push origin <branch name>
+
+Git pull : This command fetch and merge the changes from the remote repo to the local repo.
+git pull origin <branch name>
+
+Git Status: Shows the status of changes in the working director.
+git status
+
+
+Drawbacks: Branch merging conflicts are challenging to resolve.
+
+Advance Concept of Git
+Branching: 
+1- Check Current Branch:
+git status
+
+2- Check local branches: 
+git branch
+
+3- Check remote branches:
+git branch -r
+
+4- Check All branches(remote and local):
+git branch -a
+
+5- Create Branch:
+git branch feature1
+
+6- Rename current branch:
+git branch -m <new-name>
+
+7- Rename another branch:
+git branch -m <old-name> <new-name>
+
+8- Switch Branch:
+git checkout feature1
+Or
+git switch feature1
+
+9- Create + Switch Branch:
+git checkout -b feature2
+Or
+git switch -c feature
+
+10- Merge Branch:
+git checkout main
+git merge feature1
+
+11- Delete a Branch: 
+git branch -d <branch-name>
+For force delete-
+git branch -D <branch-name>
+
+12- Compare Branch:
+git diff <main-branch> <feature-branch>
+
+13- See Merged Branch:
+git branch --merged
+
+14- See Un-Merged Branch:
+git branch --no-merged
+
+15-  Push a branch to remote:
+git push origin <branch-name>
+
+16- Delete a remote branch:
+git push origin --delete <branch-name>
+
+17- Fetch all remote branch: Download branch info from remote
+git fetch --all
+
+18- Find which branch contains a commit:
+git branch --contains <commit-id>
+
+19- Push all local Branches:
+git push --all origin
+
+Connect Git to GitHub:
+Step1- Create a repo in github
+Step2- Connect github repo to the local git 
+git remote add origin <repo-url>
+
+Step3- Verify the connection 
+git remote -v
+
+Step4- Push file to remote repo
+git push -u origin main
+Push- upload commits
+Origin- github repo
+-u - remember this connection for future push and pull 
+Main- branch name from the branch we want to push the file
+Important Commands:
+1- Change Github Repo URL: to configure any other remote repo locally 
+Ex- currently we have added remote origin - anant-linux-repo but now you want to change this origin to any other github repo like to- anant-git-note-repo
+git remote set-url origin <new-repo-url>
+
+2- Remove Github Connection:
+git remote remove origin
+Or 
+git remote rm origin
+
+Other Impt command after connecting git and github:
+1- Clone an existing repository: it downloads all the project files from remote repo to local computer
+git clone <repo-url>
+
+2- Push a complete new branch to github:
+git push origin <branch-name>
+
+3- Download and merge changes from github:
+git pull origin master
+
+4- To push from local master branch to github master branch
+git push origin master:master
+Or
+git push origin master
+Or
+git push
+Or 
+git push -u origin master
+
+5- To push from local login-feature branch to remote repo master branch
+git push origin login-feature:master
+
+6- To push from local login-feature branch to remote repo login-feature branch
+git push origin login-feature:login-feature
+
+
