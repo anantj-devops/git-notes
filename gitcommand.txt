@@ -21,6 +21,10 @@ rm <filename>
 Git restore <filename>: to recover deleted file
 git restore <filename>
 
+To restore file deleted and commited
+git log --<file-name>
+git checkout <commit-hash> -- <filename> (commit hash is basically commit id, we can also use starting 3,4letters of the commit id rather then complete commit id)
+
 Git Clone: Clone a remote repository to our local system
 Note- this download the entire project file to the local system
 git clone [URL]
