@@ -1,0 +1,1 @@
+this is dev2.txt file created inside the branch dev and pushing this file to the github dev branch and ten we try to merge this file to the master on the github 
